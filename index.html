@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Even Odd Find</title>
+</head>
+<!-- 3----------------------------------------------------- -->
+<h2>Total Numbers</h2>
+<p id="numbers"></p>
+<h3>Even Numbers</h3>
+<p id="even"></p>
+<h3>Odd Numbers</h3>
+<p id="odd"></p>
+<body>
+
+</body>
+<script>
+    // 3------------------------------------------------------------------------------
+    let arr = [];
+    let even = [];
+    let odd = [];
+    let number;
+    for (i = 0; i < 10; i++) {
+        number = +prompt("Enter Number");
+        arr.push(number);
+        if (arr[i] % 2 == 0) {
+            even.push(arr[i]);
+            document.getElementById("even").innerHTML = even;
+        }
+        else {
+            console.log("Odd Numbers : " + number);
+            odd.push(arr[i]);
+            document.getElementById("odd").innerHTML = odd;
+        }
+    }
+    document.getElementById("numbers").innerHTML = arr;
+</script>
+
+</html>
